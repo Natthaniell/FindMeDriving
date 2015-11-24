@@ -6,17 +6,76 @@
                 <h4 class="aside-title" ng-bind="title"></h4></div>
             <div class="aside-body">
 
-                <h4>Choose user:</h4>
-                <button type="button" class="btn btn-default" ng-model="selectedUsername" data-html="1" bs-options="user.username for user in model.getUsersList()" bs-select>
-                    Action <span class="caret"></span>
-                </button>
+                <div ng-show="model.getUsersList().length">
+                    <h4>Choose user:</h4>
+                    <button type="button" class="btn btn-default"
+                            ng-model="selectedUsername"
+                            data-html="1"
+                            data-placeholder="Select a user"
+                            bs-options="user.username  for user in model.getUsersList()" bs-select>
+                        Action <span class="caret"></span>
+                    </button>
+                </div>
 
-                <h4>Choose journey:</h4>
-                <button type="button" class="btn btn-default" ng-model="selectedDate" data-html="1" bs-options="date.datatime for date in model.getAvailableDates()" bs-select>
-                    Action <span class="caret"></span>
-                </button>
+                <div ng-show="model.getAvailableDates().length">
+                    <h4>Choose a date:</h4>
+                    <button type="button" class="btn btn-default"
+                            ng-model="selectedDate"
+                            data-html="1"
+                            data-placeholder="Select a date"
+                            bs-options="date.label for date in model.getAvailableDates()" bs-select>
+                        Action <span class="caret"></span>
+                    </button>
+                </div>
 
+                <div ng-show="model.getAvailableJourneys().length">
+                    <h4>Choose journey:</h4>
+                    <button type="button" class="btn btn-default"
+                            ng-model="selectedJourney"
+                            data-html="1"
+                            data-placeholder="Select a journey"
+                            bs-options="date.label for date in model.getAvailableJourneys()" bs-select>
+                        Action <span class="caret"></span>
+                    </button>
+                </div>
+
+                <br>
+
+                <button class="btn btn-secondary" ng-click="model.refresh()">Refresh</button>
                 <button class="btn btn-primary" ng-click="model.change()">OK</button>
+
+                <hr>
+
+                <!------ selecting map settings ------>
+                <div class="settings-element">
+                    <div class="description">
+                        <span class="title">Driving</span>
+                        <span class="subtitle">Turn this off if you are just walking/commuting</span>
+                    </div>
+                    <div class="switch">
+                        <input type="checkbox" class="js-switch" ng-model="model.snapToRoad" ui-switch checked />
+                    </div>
+                </div>
+
+                <div class="settings-element">
+                    <div class="description">
+                        <span class="title">Auto center</span>
+                        <span class="subtitle">Center map automaticly on every data sync.</span>
+                    </div>
+                    <div class="switch">
+                        <input type="checkbox" class="js-switch" ng-model="model.autoSyncCenter" ui-switch checked />
+                    </div>
+                </div>
+
+                <div class="settings-element">
+                    <div class="description">
+                        <span class="title">Extra stats</span>
+                        <span class="subtitle">Show extra markers with statistics</span>
+                    </div>
+                    <div class="switch">
+                        <input type="checkbox" class="js-switch" ng-model="model.extraLocationsStats" ui-switch checked />
+                    </div>
+                </div>
 
             </div>
             <div class="aside-footer">

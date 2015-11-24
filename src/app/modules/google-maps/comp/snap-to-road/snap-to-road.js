@@ -46,13 +46,9 @@ define(["require", "exports", 'core/utils/utils'], function (require, exports, u
         // Best to pass all the app known locations,
         // those will gonna be resolve if actually needs any snapping
         SnapToRoad.prototype.addLocations = function (locations) {
-            var _this = this;
             // check if any points has been send over
-            if (!locations.length) {
-                console.error('no points to add to snap in comp/snap-to-road');
-                return;
-            }
-            ;
+            //if(!locations.length) { console.error('no points to add to snap in comp/snap-to-road'); return; };
+            var _this = this;
             angular.forEach(locations, function (location, index) {
                 // only if location has not been yet snap
                 if (location.isFixedLocation == 0) {
@@ -110,7 +106,7 @@ define(["require", "exports", 'core/utils/utils'], function (require, exports, u
                 // set all skiped locations as fixed locations
                 angular.forEach(locationsGroup, function (location) {
                     if (location.isFixedLocation == 0) {
-                        console.info('not fixed: ' + location.id);
+                        //console.info('not fixed: ' + location.id);
                         // set location as fixed
                         location.isFixedLocation = 1;
                         // store original lat and lng

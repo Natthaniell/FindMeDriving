@@ -20,7 +20,6 @@ class OldToNewConverter{
     }
 
     public convert(){
-        console.warn('convert start');
 
         var convertedLocations = [];
 

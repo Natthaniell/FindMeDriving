@@ -27,9 +27,9 @@ class DataAPI {
         });
     }
 
-    public getAvailableDates(){
+    public getAvailableDates(username){
         return this.$http.post(this.baseUrl + 'api/getAvailableDates.php', $.param({
-            username : 'Radek'
+            username : username
         }),{
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         });

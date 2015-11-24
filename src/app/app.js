@@ -4,7 +4,7 @@
  */
 ///<reference path="../typing/all.d.ts"/>
 ///<reference path="main.ts"/>
-define(["require", "exports", 'core/utils/utils', "angular", "ngResource", "ngSanitize", "ngAnimate", "ngTouch", "ngStorage", "ngUiRouter", "ngMultiTransclude", "jquery", "ngStrap", "ngStrapTpl"], function (require, exports, utils) {
+define(["require", "exports", 'core/utils/utils', "angular", "ngResource", "ngSanitize", "ngAnimate", "ngTouch", "ngStorage", "ngUiRouter", "ngMultiTransclude", "jquery", "ngStrap", "ngStrapTpl", "ngSwitchery", "ngNya"], function (require, exports, utils) {
     var app = angular.module('App', [
         'ngResource',
         'ngSanitize',
@@ -14,6 +14,8 @@ define(["require", "exports", 'core/utils/utils', "angular", "ngResource", "ngSa
         'ui.router',
         'multi-transclude',
         'mgcrea.ngStrap',
+        'NgSwitchery',
+        'nya.bootstrap.select'
     ]);
     app.init = function (container) {
         angular.bootstrap(container, ['App']);

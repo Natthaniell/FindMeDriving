@@ -1,0 +1,74 @@
+
+#asideMenuButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1050;
+    button.menu-logo-button {
+        width: 65px;
+        height: 65px;
+        background: #FF4132;
+        border-radius: 100px;
+        color: white;
+        font-size: 18px;
+        border: none;
+        background: url('../img/fmd_icon.png');
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        cursor: pointer;
+        &:focus {
+            border: none;
+            outline: none;
+        }
+        &:hover {
+            box-shadow: 0px 0px 0px 4px #E23225;
+        }
+    }
+
+    .aside-body {
+        padding: 20px 20px 20px 40px;
+
+        hr{
+
+        }
+
+        .settings-element{
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            margin-top: 10px;
+            border: 1px solid #E0E0E0;
+            border-width: 0px 0px 1px 0px;
+            padding-bottom: 10px;
+
+            .description, .switch{
+                float: left;
+            }
+            .description{
+                width: 75%;
+                border: 1px solid #E0E0E0;
+                border-width: 0px 1px 0px 0px;
+                margin-right: 5%;
+                .title{
+                    font-size: 16px;
+                    color: #333333;
+                    font-weight: 300;
+                    display: block;
+                    text-align: left;
+                }
+                .subtitle{
+                    font-size: 12px;
+                    color: #A0A0A0;
+                    font-weight: 100;
+                    display: block;
+                    text-align: left;
+                }
+            }
+            .switch{
+                width: 20%;
+            }
+        }
+
+    }
+}
+

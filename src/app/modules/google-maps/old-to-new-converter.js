@@ -10,7 +10,6 @@ define(["require", "exports", 'core/utils/utils'], function (require, exports, u
         OldToNewConverter.$inject = ['API', '$http', '$q', '$timeout'];
         OldToNewConverter.prototype.convert = function () {
             var _this = this;
-            console.warn('convert start');
             var convertedLocations = [];
             this.$http.get('api/json/getLocations.json').then(function (res) {
                 angular.forEach(res.data, function (location) {

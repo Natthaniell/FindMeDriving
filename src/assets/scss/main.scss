@@ -1,60 +1,12 @@
 @import "lib/bootstrap/bootstrap";
 @import "lib/ngstrap";
+@import "lib/switchery";
+@import "lib/angular-nya";
+
+@import "main/vars";
+@import "main/main";
+
+@import "modules/google-maps";
+@import "modules/google-maps-settings";
 
 
-html, body { height: 100%; margin: 0; padding: 0;
-  overflow: hidden; }
-#map { height: 100%; }
-
-
-#module-google-maps{
-  height: 100%;
-  width: 100%;
-  display: block;
-  top: 0;
-  left: 0;
-  position: absolute;
-}
-
-
-#appLoadingView{
-  background: url('../img/fmd_icon.png');
-  width: 100%;
-  height:100%;
-  background-position: center center;
-  background-repeat:no-repeat;
-  background-size: 20% auto;
-}
-
-
-#asideMenuButton{
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  z-index: 1050;
-  button.menu-logo-button{
-    width: 65px;
-    height:65px;
-    background: #FF4132;
-    border-radius: 100px;
-    color: white;
-    font-size: 18px;
-    border: none;
-    background: url('../img/fmd_icon.png');
-    background-repeat:no-repeat;
-    background-size: 100% auto;
-    cursor: pointer;
-    &:focus{
-      border:none;
-      outline:none;
-    }
-    &:hover{
-      box-shadow: 0px 0px 0px 4px #E23225;
-    }
-  }
-
-
-  .aside-body{
-    padding: 20px 20px 20px 40px;
-  }
-}

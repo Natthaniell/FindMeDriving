@@ -39,9 +39,7 @@ define(["require", "exports", 'core/utils/register', 'config'], function (requir
         };
         Utils.prototype.setAsync = function (variable, promise, cb) {
             promise.then(function (res) {
-                console.info('set');
                 variable = res;
-                console.info(variable);
                 cb();
             });
         };

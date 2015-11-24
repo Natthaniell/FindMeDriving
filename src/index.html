@@ -2,10 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
     <title>FMD</title>
     <link rel="stylesheet" href="assets/css/main.css" type="text/css" media="screen, projection, print" />
 </head>
     <body>
+
+        <div id="syncStatus" ng-class="{'active' : sync}">
+
+        </div>
+
+        <div id="locationStatus" ng-show="locationStats">
+            <p class="speed">Speed: <span>{{locationStats.speed}}</span></p>
+            <p class="time">Time: <span>{{locationStats.time}}</span></p>
+        </div>
 
         <div id="asideMenuButton">
             <button type="button" class="menu-logo-button"

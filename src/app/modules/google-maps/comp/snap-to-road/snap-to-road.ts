@@ -54,7 +54,7 @@ class SnapToRoad{
     public addLocations(locations){
 
         // check if any points has been send over
-        if(!locations.length) { console.error('no points to add to snap in comp/snap-to-road'); return; };
+        //if(!locations.length) { console.error('no points to add to snap in comp/snap-to-road'); return; };
 
         angular.forEach(locations, (location, index) => {
             // only if location has not been yet snap
@@ -127,7 +127,7 @@ class SnapToRoad{
             // set all skiped locations as fixed locations
             angular.forEach(locationsGroup, (location) => {
                 if(location.isFixedLocation == 0){
-                    console.info('not fixed: ' + location.id);
+                    //console.info('not fixed: ' + location.id);
                     // set location as fixed
                     location.isFixedLocation = 1;
                     // store original lat and lng

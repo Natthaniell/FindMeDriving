@@ -26,9 +26,11 @@
 ///<amd-dependency path="jquery"/>
 ///<amd-dependency path="ngStrap"/>
 ///<amd-dependency path="ngStrapTpl"/>
+///<amd-dependency path="ngSwitchery"/>
+///<amd-dependency path="ngNya"/>
 import utils = require('core/utils/utils');
 
-var app : appModule = angular.module('App', [
+var app : any = angular.module('App', [
     'ngResource',           // ngResource
     'ngSanitize',           // ngSanitize
     'ngAnimate',            // ngAnimate
@@ -37,6 +39,8 @@ var app : appModule = angular.module('App', [
     'ui.router',            // ngUiRouter
     'multi-transclude',     // ngMultiTransclude
     'mgcrea.ngStrap',
+    'NgSwitchery',
+    'nya.bootstrap.select'
 
     // internal common modules
 
@@ -45,7 +49,7 @@ var app : appModule = angular.module('App', [
 ]);
 
 
-app.init = function(container : HTMLElement) {
+app.init = function(container : any) {
     angular.bootstrap(container, ['App']);
 };
 

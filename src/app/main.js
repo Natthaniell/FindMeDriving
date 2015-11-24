@@ -19,11 +19,23 @@ require.config({
         q: '../lib/q',
         qtip: '../lib/jquery.qtip.min',
         ngStrap: '../lib/angular-strap',
-        ngStrapTpl: '../lib/angular-strap-tpl'
+        ngStrapTpl: '../lib/angular-strap-tpl',
+        switchery: '../lib/switchery',
+        ngSwitchery: '../lib/angular-switchery',
+        ngNya: '../lib/angular-nya',
+        labelmarkers: '../lib/labelmarkers'
     },
     shim: {
+        ngNya: {
+            deps: ['angular'],
+            exports: 'angular'
+        },
         qtip: {
             deps: ['jquery']
+        },
+        ngSwitchery: {
+            deps: ['switchery', 'angular'],
+            exports: 'angular'
         },
         ngMultiTransclude: {
             deps: ['angular'],
@@ -71,7 +83,7 @@ require.config({
     }
 });
 // Preinitialize Angular Application
-require(['app', 'core/utils/utils'], function (app) {
+require(['app', 'core/utils/utils', 'labelmarkers'], function (app) {
     require([], function () {
         // Start angular
         require([

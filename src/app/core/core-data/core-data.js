@@ -21,9 +21,9 @@ define(["require", "exports", 'core/utils/utils'], function (require, exports, u
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
             });
         };
-        DataAPI.prototype.getAvailableDates = function () {
+        DataAPI.prototype.getAvailableDates = function (username) {
             return this.$http.post(this.baseUrl + 'api/getAvailableDates.php', $.param({
-                username: 'Radek'
+                username: username
             }), {
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
             });
